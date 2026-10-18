@@ -31,21 +31,7 @@ So a team runs on two things: **messages** (handoffs and reports) and **shared f
 
 ## The pattern: one supervisor + specialists
 
-```mermaid
-flowchart TD
-    U["👤 You<br/>send requests · approve key decisions"]
-    S["🧭 Supervisor bot<br/>plan · delegate · review · deliver"]
-    A["🔎 Specialist A<br/>e.g. research"]
-    B["✍️ Specialist B<br/>e.g. writing"]
-    C["📊 Specialist C<br/>e.g. data"]
-    F[("🗂️ Shared folder<br/>/workspace/shared/&lt;team&gt;/")]
-    U -- "request" --> S
-    S -- "delivery" --> U
-    S -- "handoff message" --> A & B & C
-    A & B & C -. "report file path" .-> S
-    A & B & C --> F
-    F -. "read · verify" .-> S
-```
+![Supervisor + specialists flow](assets/team-flow-en.gif)
 
 1. You send a request to the **supervisor** — your single daily entry point.
 2. The supervisor breaks it down and messages each specialist with the deliverable and acceptance criteria.
